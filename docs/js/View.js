@@ -1566,7 +1566,8 @@ class View {
         setAddr($('#receive .addr'), address);
         drawQRCode(TonWeb.utils.formatTransferUrl(address), '#qr');
         this.address = address;
-        this.loadDiamond(address);
+        // TODO: Uncomment this, when needed
+        // this.loadDiamond(address);
     }
 
     /**

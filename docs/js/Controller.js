@@ -588,7 +588,8 @@ class Controller {
             this.isTestnet = IS_EXTENSION ? (await storage.getItem('isTestnet')) : (self.location.href.indexOf('testnet') > -1);
             this.isDebug = IS_EXTENSION ? (await storage.getItem('isDebug')) : (self.location.href.indexOf('debug') > -1);
 
-            const mainnetRpc = 'https://toncenter.com/api/v2/jsonRPC';
+            // TODO: Move this to project settings
+            const mainnetRpc = 'http://192.168.0.12/jsonRPC';
             const testnetRpc = 'https://testnet.toncenter.com/api/v2/jsonRPC';
 
             if (IS_EXTENSION && !(await storage.getItem('address'))) {
@@ -667,9 +668,9 @@ class Controller {
      * @return {Promise<any>}
      */
     async sendToIndex(method, params) {
-        const mainnetRpc = 'https://stage.toncenter.com/api/v3/';
-        const testnetRpc = 'https://stage-testnet.toncenter.com/api/v3/';
-        const rpc = this.isTestnet ? testnetRpc : mainnetRpc;
+
+        // TODO: Move this to project settings
+        const rpc = 'http://192.168.0.12:8081/';
 
         const headers = {
             'Content-Type': 'application/json',
@@ -778,8 +779,21 @@ class Controller {
 
         const arr = [];
         const transactionsResponse= await this.getTransactionsFromIndex(this.myAddress, limit);
-        const transactions = transactionsResponse.transactions; // index.transaction[]
-        const addressBook = transactionsResponse.address_book;
+        const transactions = transactionsResponse;
+        const addressBook = {};
+
+        // Build the address book based on transactions
+        for (const t of transactions) {
+            addressBook[t.account] = {
+                user_friendly: t.account_friendly
+            }
+            addressBook[t.in_msg.source] = {
+                user_friendly: t.in_msg.source_friendly
+            }
+            addressBook[t.in_msg.destination] = {
+                user_friendly: t.in_msg.destination_friendly
+            }
+        }
 
         /**
          * @param rawAddress    {string}
