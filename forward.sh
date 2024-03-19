@@ -29,4 +29,4 @@ EOL
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout key.pem -out cert.pem -subj "/CN=localhost"
 
 # Run Docker command to start the HTTPS wrapper
-docker run -d --name $1 -p 443:443 -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf -v $(pwd)/cert.pem:/etc/nginx/cert.pem -v $(pwd)/key.pem:/etc/nginx/key.pem nginx
+docker run -d --name $1 -p $3:443 -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf -v $(pwd)/cert.pem:/etc/nginx/cert.pem -v $(pwd)/key.pem:/etc/nginx/key.pem nginx
