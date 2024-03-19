@@ -65,7 +65,7 @@ const start = async targetName => {
 
     await startServer(port, 'docs');
 
-    const address = `http://localhost:${port}`;
+    const address = `http://0.0.0.0:${port}`;
     console.log(`App available on ${address}`);
     await open(address);
 };
