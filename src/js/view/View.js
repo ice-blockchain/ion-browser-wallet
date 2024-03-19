@@ -1284,7 +1284,7 @@ class View {
 
             case 'setIsTestnet':
                 this.isTestnet = params;
-                $('.your-balance').innerText = params ? 'Your testnet balance' : 'Your mainnet balance';
+                $('.your-balance').innerText = params ? 'Your testnet balance' : 'Your testnet balance';
                 break;
 
             case 'setBalance':

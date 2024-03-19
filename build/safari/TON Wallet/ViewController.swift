@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  TON Wallet
+//  ION Wallet
 //
 //  Created by Сергей Иваньков on 15.03.2022.
 //

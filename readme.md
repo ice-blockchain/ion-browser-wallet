@@ -1,6 +1,6 @@
-# TON Wallet
+# ION Wallet
 
-TON Wallet is a free client-side interface for interact with The Open Network blockchain.
+ION Wallet is a free client-side interface for interact with The Open Network blockchain.
 
 - [Website (wallet.ton.org)](https://wallet.ton.org)
 - [Chrome extension (also available for any Chromium-based browser)](https://chrome.google.com/webstore/detail/ton-wallet/nphplpgoakhhjchkkhmiggakijnkhfnd)

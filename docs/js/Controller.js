@@ -779,8 +779,8 @@ class Controller {
 
         const arr = [];
         const transactionsResponse= await this.getTransactionsFromIndex(this.myAddress, limit);
-        const transactions = transactionsResponse;
-        const addressBook = {};
+        const transactions = transactionsResponse; // transactionsResponse.transactions; // index.transaction[]
+        const addressBook = {}; // transactionsResponse.address_book;
 
         // Build the address book based on transactions
         for (const t of transactions) {

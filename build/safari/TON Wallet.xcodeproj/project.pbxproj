@@ -15,7 +15,7 @@
 		850824DE27E0F882005B1F54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850824DD27E0F882005B1F54 /* ViewController.swift */; };
 		850824E127E0F882005B1F54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850824DF27E0F882005B1F54 /* Main.storyboard */; };
 		850824E327E0F885005B1F54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850824E227E0F885005B1F54 /* Assets.xcassets */; };
-		850824EB27E0F885005B1F54 /* TON Wallet Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 850824EA27E0F885005B1F54 /* TON Wallet Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		850824EB27E0F885005B1F54 /* ION Wallet Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 850824EA27E0F885005B1F54 /* ION Wallet Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		850824F027E0F885005B1F54 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850824EF27E0F885005B1F54 /* SafariWebExtensionHandler.swift */; };
 		858F762C27E794CB0020E363 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 858F762627E794CB0020E363 /* js */; };
 		858F762D27E794CB0020E363 /* main.css in Resources */ = {isa = PBXBuildFile; fileRef = 858F762727E794CB0020E363 /* main.css */; };
@@ -31,7 +31,7 @@
 			containerPortal = 850824C627E0F882005B1F54 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 850824E927E0F885005B1F54;
-			remoteInfo = "TON Wallet Extension";
+			remoteInfo = "ION Wallet Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -42,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				850824EB27E0F885005B1F54 /* TON Wallet Extension.appex in Embed App Extensions */,
+				850824EB27E0F885005B1F54 /* ION Wallet Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		850824CE27E0F882005B1F54 /* TON Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TON Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		850824CE27E0F882005B1F54 /* ION Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ION Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850824D127E0F882005B1F54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		850824D527E0F882005B1F54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		850824D727E0F882005B1F54 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		850824E027E0F882005B1F54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		850824E227E0F885005B1F54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850824E427E0F885005B1F54 /* TON_Wallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TON_Wallet.entitlements; sourceTree = "<group>"; };
-		850824EA27E0F885005B1F54 /* TON Wallet Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TON Wallet Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		850824EA27E0F885005B1F54 /* ION Wallet Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ION Wallet Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850824EF27E0F885005B1F54 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		8508250227E0F885005B1F54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8508250327E0F885005B1F54 /* TON_Wallet_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TON_Wallet_Extension.entitlements; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 		850824C527E0F882005B1F54 = {
 			isa = PBXGroup;
 			children = (
-				850824D027E0F882005B1F54 /* TON Wallet */,
-				850824EE27E0F885005B1F54 /* TON Wallet Extension */,
+				850824D027E0F882005B1F54 /* ION Wallet */,
+				850824EE27E0F885005B1F54 /* ION Wallet Extension */,
 				850824CF27E0F882005B1F54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,13 +102,13 @@
 		850824CF27E0F882005B1F54 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				850824CE27E0F882005B1F54 /* TON Wallet.app */,
-				850824EA27E0F885005B1F54 /* TON Wallet Extension.appex */,
+				850824CE27E0F882005B1F54 /* ION Wallet.app */,
+				850824EA27E0F885005B1F54 /* ION Wallet Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		850824D027E0F882005B1F54 /* TON Wallet */ = {
+		850824D027E0F882005B1F54 /* ION Wallet */ = {
 			isa = PBXGroup;
 			children = (
 				850824D127E0F882005B1F54 /* AppDelegate.swift */,
@@ -118,7 +118,7 @@
 				850824E427E0F885005B1F54 /* TON_Wallet.entitlements */,
 				850824D327E0F882005B1F54 /* Resources */,
 			);
-			path = "TON Wallet";
+			path = "ION Wallet";
 			sourceTree = "<group>";
 		};
 		850824D327E0F882005B1F54 /* Resources */ = {
@@ -132,7 +132,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		850824EE27E0F885005B1F54 /* TON Wallet Extension */ = {
+		850824EE27E0F885005B1F54 /* ION Wallet Extension */ = {
 			isa = PBXGroup;
 			children = (
 				858E09B927E1038E00500609 /* Resources */,
@@ -140,7 +140,7 @@
 				8508250227E0F885005B1F54 /* Info.plist */,
 				8508250327E0F885005B1F54 /* TON_Wallet_Extension.entitlements */,
 			);
-			path = "TON Wallet Extension";
+			path = "ION Wallet Extension";
 			sourceTree = "<group>";
 		};
 		858E09B927E1038E00500609 /* Resources */ = {
@@ -159,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		850824CD27E0F882005B1F54 /* TON Wallet */ = {
+		850824CD27E0F882005B1F54 /* ION Wallet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8508250A27E0F885005B1F54 /* Build configuration list for PBXNativeTarget "TON Wallet" */;
+			buildConfigurationList = 8508250A27E0F885005B1F54 /* Build configuration list for PBXNativeTarget "ION Wallet" */;
 			buildPhases = (
 				850824CA27E0F882005B1F54 /* Sources */,
 				850824CB27E0F882005B1F54 /* Frameworks */,
@@ -173,14 +173,14 @@
 			dependencies = (
 				850824ED27E0F885005B1F54 /* PBXTargetDependency */,
 			);
-			name = "TON Wallet";
-			productName = "TON Wallet";
-			productReference = 850824CE27E0F882005B1F54 /* TON Wallet.app */;
+			name = "ION Wallet";
+			productName = "ION Wallet";
+			productReference = 850824CE27E0F882005B1F54 /* ION Wallet.app */;
 			productType = "com.apple.product-type.application";
 		};
-		850824E927E0F885005B1F54 /* TON Wallet Extension */ = {
+		850824E927E0F885005B1F54 /* ION Wallet Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8508250627E0F885005B1F54 /* Build configuration list for PBXNativeTarget "TON Wallet Extension" */;
+			buildConfigurationList = 8508250627E0F885005B1F54 /* Build configuration list for PBXNativeTarget "ION Wallet Extension" */;
 			buildPhases = (
 				850824E627E0F885005B1F54 /* Sources */,
 				850824E727E0F885005B1F54 /* Frameworks */,
@@ -190,9 +190,9 @@
 			);
 			dependencies = (
 			);
-			name = "TON Wallet Extension";
-			productName = "TON Wallet Extension";
-			productReference = 850824EA27E0F885005B1F54 /* TON Wallet Extension.appex */;
+			name = "ION Wallet Extension";
+			productName = "ION Wallet Extension";
+			productReference = 850824EA27E0F885005B1F54 /* ION Wallet Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 850824C927E0F882005B1F54 /* Build configuration list for PBXProject "TON Wallet" */;
+			buildConfigurationList = 850824C927E0F882005B1F54 /* Build configuration list for PBXProject "ION Wallet" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,8 +226,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				850824CD27E0F882005B1F54 /* TON Wallet */,
-				850824E927E0F885005B1F54 /* TON Wallet Extension */,
+				850824CD27E0F882005B1F54 /* ION Wallet */,
+				850824E927E0F885005B1F54 /* ION Wallet Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -284,7 +284,7 @@
 /* Begin PBXTargetDependency section */
 		850824ED27E0F885005B1F54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 850824E927E0F885005B1F54 /* TON Wallet Extension */;
+			target = 850824E927E0F885005B1F54 /* ION Wallet Extension */;
 			targetProxy = 850824EC27E0F885005B1F54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -427,13 +427,13 @@
 		8508250727E0F885005B1F54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "TON Wallet Extension/TON_Wallet_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ION Wallet Extension/TON_Wallet_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "TON Wallet Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TON Wallet";
+				INFOPLIST_FILE = "ION Wallet Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ION Wallet";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,13 +457,13 @@
 		8508250827E0F885005B1F54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "TON Wallet Extension/TON_Wallet_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ION Wallet Extension/TON_Wallet_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "TON Wallet Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "TON Wallet";
+				INFOPLIST_FILE = "ION Wallet Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ION Wallet";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,13 +490,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "TON Wallet/TON Wallet.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ION Wallet/ION Wallet.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "TON Wallet";
+				INFOPLIST_KEY_CFBundleDisplayName = "ION Wallet";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -525,13 +525,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "TON Wallet/TON Wallet.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "ION Wallet/ION Wallet.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "TON Wallet";
+				INFOPLIST_KEY_CFBundleDisplayName = "ION Wallet";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -557,7 +557,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		850824C927E0F882005B1F54 /* Build configuration list for PBXProject "TON Wallet" */ = {
+		850824C927E0F882005B1F54 /* Build configuration list for PBXProject "ION Wallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8508250427E0F885005B1F54 /* Debug */,
@@ -566,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8508250627E0F885005B1F54 /* Build configuration list for PBXNativeTarget "TON Wallet Extension" */ = {
+		8508250627E0F885005B1F54 /* Build configuration list for PBXNativeTarget "ION Wallet Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8508250727E0F885005B1F54 /* Debug */,
@@ -575,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8508250A27E0F885005B1F54 /* Build configuration list for PBXNativeTarget "TON Wallet" */ = {
+		8508250A27E0F885005B1F54 /* Build configuration list for PBXNativeTarget "ION Wallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8508250B27E0F885005B1F54 /* Debug */,

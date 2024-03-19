@@ -14,8 +14,8 @@ const matches = [
 const base = {
     manifest_version: 2,
     version,
-    name: 'TON Wallet',
-    description: 'Set up your own TON Wallet on The Open Network',
+    name: 'ION Wallet',
+    description: 'Set up your own ION Wallet on The Open Network',
     icons: {
       16: 'assets/extension/icon-16.png',
       19: 'assets/extension/icon-19.png',
@@ -31,7 +31,7 @@ const base = {
     },
     permissions: ['webRequest'],
     browser_action: {
-        default_title: 'TON Wallet'
+        default_title: 'ION Wallet'
     },
     background: {
         scripts: ['js/extension/background.js'],

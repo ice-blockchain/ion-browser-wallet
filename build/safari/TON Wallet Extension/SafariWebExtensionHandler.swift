@@ -1,6 +1,6 @@
 //
 //  SafariWebExtensionHandler.swift
-//  TON Wallet Extension
+//  ION Wallet Extension
 //
 //  Created by Сергей Иваньков on 15.03.2022.
 //

@@ -20,7 +20,7 @@ const pack = async targetName => {
             const child = spawn(
                 'xcodebuild',
                 [
-                    '-project', 'build/safari/TON Wallet.xcodeproj',
+                    '-project', 'build/safari/ION Wallet.xcodeproj',
                     'BUILD_DIR=../../artifacts/safari',
                     'CONFIGURATION_BUILD_DIR=../../artifacts/safari',
                     'SYMROOT=../../artifacts/safari'

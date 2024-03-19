@@ -80,7 +80,7 @@
                 };
             });
 
-            // Send jsonrpc request to TON Wallet
+            // Send jsonrpc request to ION Wallet
             window.postMessage(
                 {
                     type: 'gramWalletAPI_ton_provider_write',
@@ -179,7 +179,7 @@
                                 const res = await fetch('https://ton.org/app/' + fileName);
 
                                 if (res.status !== 200) {
-                                    throw new Error('[TON Wallet] Failed to load magic: ' + res.statusText + '. File: ' + fileName);
+                                    throw new Error('[ION Wallet] Failed to load magic: ' + res.statusText + '. File: ' + fileName);
                                 }
 
                                 return [
@@ -230,7 +230,7 @@
         /* Connection handling */
 
         _connect() {
-            // Send to TON Wallet
+            // Send to ION Wallet
             window.postMessage(
                 {type: 'gramWalletAPI_ton_provider_connect'},
                 this.targetOrigin,
@@ -309,7 +309,7 @@
             };
 
             this.walletInfo = {
-                name: 'TON Wallet',
+                name: 'ION Wallet',
                 image: 'https://wallet.ton.org/assets/ui/qr-logo.png',
                 about_url: 'https://wallet.ton.org',
             }
