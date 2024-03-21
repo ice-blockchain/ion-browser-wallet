@@ -1038,7 +1038,7 @@ class View {
         $('#balance').appendChild(createElement({tag: 'span', text: first}));
         $('#balance').appendChild(createElement({tag: 'span', style: {'font-size': '24px'}, text: last}));
 
-        $('#sendBalance').innerText = 'Balance: ' + s + ' ✴';
+        $('#sendBalance').innerText = 'Balance: ' + s + ' ICE';
         toggle($('#sendButton'), balance.gt(new BN(0)) ? 'inline-block' : 'none');
         this.setTransactions(txs);
         this.setUpdating(false);
@@ -1099,11 +1099,11 @@ class View {
                             clazz: ['tx-amount', 'tx-amount-green'],
                             text: '+' + amountFormatted
                         }),
-                        createElement({tag: 'span', text: ' ✴'}),
+                        createElement({tag: 'span', text: ' ICE'}),
                         createElement({tag: 'span', clazz: 'tx-from', text: ' from:'})
                     ] : [
                         createElement({tag: 'span', clazz: 'tx-amount', text: amountFormatted}),
-                        createElement({tag: 'span', text: ' ✴'}),
+                        createElement({tag: 'span', text: ' ICE'}),
                         createElement({tag: 'span', clazz: 'tx-from', text: ' to:'})
                     ]
                 }),
@@ -1135,7 +1135,7 @@ class View {
         /** @type {string} */
         const addr = isReceive ? tx.from_addr : tx.to_addr;
         this.currentTransactionAddr = addr;
-        $('#transactionAmount').innerText = (isReceive ? '+' + amountFormatted : amountFormatted) + ' ✴';
+        $('#transactionAmount').innerText = (isReceive ? '+' + amountFormatted : amountFormatted) + ' ICE';
         $('#transactionFee').innerText = fromNano(tx.fee) + ' transaction fee';
         $('#transactionSenderLabel').innerText = isReceive ? 'Sender' : 'Recipient';
         setAddr($('#transactionSender'), addr);
