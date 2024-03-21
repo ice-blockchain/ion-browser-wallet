@@ -1358,7 +1358,7 @@ class View {
                 this.toggleButtonLoader($('#send_btn'), false);
                 $('#amountInput').classList.add('error');
 
-                $('#notify').innerText = `Estimated fee is ~${fromNano(params.fee)} TON`;
+                $('#notify').innerText = `Estimated fee is ~${fromNano(params.fee)} ICE`;
                 triggerClass($('#notify'), 'faded-show', 3000);
                 break;
 
@@ -1452,9 +1452,9 @@ class View {
                         $('#toWalletInput').focus();
                         break;
                     case 'sendConfirm':
-                        $('#sendConfirmAmount').innerText = fromNano(new BN(params.amount)) + ' TON';
+                        $('#sendConfirmAmount').innerText = fromNano(new BN(params.amount)) + ' ICE';
                         setAddr($('#sendConfirmAddr'), params.toAddress);
-                        $('#sendConfirmFee').innerText = params.fee ? 'Fee: ~' + fromNano(new BN(params.fee)) + ' TON' : '';
+                        $('#sendConfirmFee').innerText = params.fee ? 'Fee: ~' + fromNano(new BN(params.fee)) + ' ICE' : '';
 
                         toggle($('#sendConfirmNotEncryptedNote'), !params.needEncryptComment);
                         toggle($('#sendConfirm .popup-footer'), !this.isLedger);

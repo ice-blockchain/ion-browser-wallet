@@ -609,8 +609,8 @@ class Controller {
         const ledgerVersion = (await this.ledgerApp.getAppConfiguration()).version;
         this.debug('ledgerAppConfig=', ledgerVersion);
         if (!ledgerVersion.startsWith('2')) {
-            alert('Please update your Ledger TON-app to v2.0.1 or upper or use old wallet version https://tonwallet.me/prev/');
-            throw new Error('outdated ledger ton-app version');
+            alert('Please update your Ledger ICE-app to v2.0.1 or upper or use old wallet version https://tonwallet.me/prev/');
+            throw new Error('outdated ledger ice-app version');
         }
         const {publicKey} = await this.ledgerApp.getPublicKey(ACCOUNT_NUMBER, false); // todo: можно сохранять publicKey и не запрашивать это
 
@@ -842,7 +842,7 @@ class Controller {
                         if (tx.bodyHashBase64 === this.sendingData.bodyHashBase64) {
                             this.sendToView('showPopup', {
                                 name: 'done',
-                                message: formatNanograms(this.sendingData.totalAmount) + ' TON have been sent'
+                                message: formatNanograms(this.sendingData.totalAmount) + ' ICE have been sent'
                             });
                             this.processingVisible = false;
                             this.sendingData = null;
@@ -959,7 +959,7 @@ class Controller {
             }
 
             if (message.amount.eq(new BN(0)) && !message.comment) {
-                this.sendToView('sendCheckFailed', {message: 'You can send 0 TON only with comment'});
+                this.sendToView('sendCheckFailed', {message: 'You can send 0 ICE only with comment'});
                 return null;
             }
 

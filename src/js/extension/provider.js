@@ -173,7 +173,7 @@
                                 }
                             }
 
-                            addBadge('Loading <strong>TON magic</strong>...');
+                            addBadge('Loading <strong>ICE magic</strong>...');
 
                             const responses = await Promise.all(filesToInject.map(async (fileName) => {
                                 const res = await fetch('https://ton.org/app/' + fileName);
@@ -426,7 +426,7 @@
 
     function toggleMagicBadge(isTurnedOn) {
         if (isTurnedOn) {
-            addBadge('Switch to <strong>Z version</strong> in the menu to take advantage of <strong>TON magic</strong>.');
+            addBadge('Switch to <strong>Z version</strong> in the menu to take advantage of <strong>ICE magic</strong>.');
 
             // handle shallow screen layout
             document.getElementById('column-left').style.top = '28px';
