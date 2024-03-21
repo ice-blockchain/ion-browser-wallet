@@ -429,6 +429,8 @@ const IS_FIREFOX = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
  * @param containerSelector {string}
  */
 const drawQRCode = (text, containerSelector) => {
+    return;
+
     const $container = $(containerSelector);
 
     clearElement($container);
@@ -756,8 +758,8 @@ class View {
         $('#menu_delete').addEventListener('click', () => this.showPopup('delete'));
 
         $('#receive_showAddressOnDeviceBtn').addEventListener('click', () => this.onShowAddressOnDevice());
-        $('#receive_invoiceBtn').addEventListener('click', () => this.onCreateInvoiceClick());
-        $('#receive_shareBtn').addEventListener('click', () => this.onShareAddressClick(false));
+        // $('#receive_invoiceBtn').addEventListener('click', () => this.onCreateInvoiceClick());
+        // $('#receive_shareBtn').addEventListener('click', () => this.onShareAddressClick(false));
         $('#receive .addr').addEventListener('click', () => this.onShareAddressClick(true));
         $('#receive_closeBtn').addEventListener('click', () => this.closePopup());
 
