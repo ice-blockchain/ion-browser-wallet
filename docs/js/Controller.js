@@ -589,14 +589,13 @@ class Controller {
             this.isDebug = IS_EXTENSION ? (await storage.getItem('isDebug')) : (self.location.href.indexOf('debug') > -1);
 
             // TODO: Move this to project settings
-            const mainnetRpc = 'https://http-api.testnet.ice.io/jsonRPC';
-            const testnetRpc = 'https://testnet.toncenter.com/api/v2/jsonRPC';
+            const rpcUri = 'https://http-api.testnet.ice.io/jsonRPC';
 
             if (IS_EXTENSION && !(await storage.getItem('address'))) {
                 await this._restoreDeprecatedStorage();
             }
 
-            this.ton = new TonWeb(new TonWeb.HttpProvider(this.isTestnet ? testnetRpc : mainnetRpc, {apiKey: this.getApiKey(this.isTestnet)}));
+            this.ton = new TonWeb(new TonWeb.HttpProvider(rpcUri, {apiKey: this.getApiKey(this.isTestnet)}));
             this.myAddress = await storage.getItem('address');
             if (this.myAddress) {
                 this.myAddress = new TonWeb.utils.Address(this.myAddress).toString(true, true, false, this.isTestnet);
