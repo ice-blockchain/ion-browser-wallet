@@ -792,6 +792,14 @@ class Controller {
             addressBook[t.in_msg.destination] = {
                 user_friendly: t.in_msg.destination_friendly
             }
+            for (const message of t.out_msgs) {
+                addressBook[message.destination] = {
+                    user_friendly: message.destination_friendly
+                };
+                addressBook[message.source] = {
+                    user_friendly: message.source_friendly
+                };
+            }
         }
 
         /**

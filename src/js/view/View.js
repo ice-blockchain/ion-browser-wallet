@@ -1034,7 +1034,7 @@ class View {
         if (s === '0') s = '0.00';
         const i = s.indexOf('.');
         const first = s.substring(0, i);
-        const last = s.substring(i);
+        const last = s.substring(i) + ' ICE';
 
         clearElement($('#balance'));
         $('#balance').appendChild(createElement({tag: 'span', text: first}));
