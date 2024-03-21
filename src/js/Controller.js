@@ -228,7 +228,7 @@ class Controller {
             this.isDebug = IS_EXTENSION ? (await storage.getItem('isDebug')) : (self.location.href.indexOf('debug') > -1);
 
             // TODO: Move this to project settings
-            const mainnetRpc = 'https://23.227.178.36:83/jsonRPC';
+            const mainnetRpc = 'https://http-api.testnet.ice.io/jsonRPC';
             const testnetRpc = 'https://testnet.toncenter.com/api/v2/jsonRPC';
 
             if (IS_EXTENSION && !(await storage.getItem('address'))) {
@@ -309,7 +309,7 @@ class Controller {
     async sendToIndex(method, params) {
 
         // TODO: Move this to project settings
-        const rpc = 'https://23.227.178.36:8083/';
+        const rpc = 'https://index-api.testnet.ice.io/';
 
         const headers = {
             'Content-Type': 'application/json',
