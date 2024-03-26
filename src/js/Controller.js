@@ -224,8 +224,8 @@ class Controller {
         return new Promise(async (resolve) => {
             await storage.removeItem('pwdHash');
 
-            this.isTestnet = IS_EXTENSION ? (await storage.getItem('isTestnet')) : (self.location.href.indexOf('testnet') > -1);
-            this.isDebug = IS_EXTENSION ? (await storage.getItem('isDebug')) : (self.location.href.indexOf('debug') > -1);
+            this.isTestnet = false; // IS_EXTENSION ? (await storage.getItem('isTestnet')) : (self.location.href.indexOf('testnet') > -1);
+            this.isDebug = false; // IS_EXTENSION ? (await storage.getItem('isDebug')) : (self.location.href.indexOf('debug') > -1);
 
             // TODO: Move this to project settings
             const rpcUri = 'https://http-api.testnet.ice.io/jsonRPC';
