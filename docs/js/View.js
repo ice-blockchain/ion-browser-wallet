@@ -753,6 +753,7 @@ class View {
         // $('#menu_extension_chrome').addEventListener('click', () => window.open('https://chrome.google.com/webstore/detail/ton-wallet/nphplpgoakhhjchkkhmiggakijnkhfnd', '_blank'));
         // $('#menu_extension_firefox').addEventListener('click', () => window.open('https://addons.mozilla.org/ru/firefox/addon/', '_blank'));
         // $('#menu_about').addEventListener('click', () => this.showPopup('about'));
+        $('#menu_showPublicKey').addEventListener('click', () => this.onMessage('showPopup', {name: 'showPublicKey'}));
         $('#menu_changePassword').addEventListener('click', () => this.onMessage('showPopup', {name: 'changePassword'}));
         $('#menu_backupWallet').addEventListener('click', () => this.sendMessage('onBackupWalletClick'));
         $('#menu_delete').addEventListener('click', () => this.showPopup('delete'));
@@ -1053,7 +1054,7 @@ class View {
 
         toggleFaded($('#modal'), name !== '');
 
-        const popups = ['alert', 'receive', 'invoice', 'invoiceQr', 'send', 'sendConfirm', 'signConfirm', 'connectConfirm', 'processing', 'done', 'menuDropdown', 'about', 'delete', 'changePassword', 'enterPassword', 'transaction', 'connectLedger', 'loader'];
+        const popups = ['alert', 'receive', 'invoice', 'invoiceQr', 'send', 'sendConfirm', 'signConfirm', 'connectConfirm', 'processing', 'done', 'menuDropdown', 'about', 'delete', 'changePassword', 'enterPassword', 'transaction', 'connectLedger', 'loader', 'showPublicKey'];
 
         popups.forEach(popup => {
             toggleFaded($('#' + popup), name === popup);
