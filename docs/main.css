@@ -1093,6 +1093,21 @@ button {
     display: none;
 }
 
+#showPublicKey .key {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: manual;
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    font-family: monospace;
+    text-align: center;
+    font-size: 18px;
+    margin-top: -4px;
+    max-width: 280px;
+    cursor: pointer;
+}
+
 .input-password {
     text-align: center;
     width: 200px;

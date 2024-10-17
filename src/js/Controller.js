@@ -771,7 +771,8 @@ class Controller {
      * @return {Promise<void>}
      */
     async showMain() {
-        this.sendToView('showScreen', {name: 'main', myAddress: this.myAddress});
+        this.sendToView('showScreen', {name: 'main', myAddress: this.myAddress, publicKeyHex: this.publicKeyHex});
+
         if (!this.walletContract) {
             const walletVersion = await storage.getItem('walletVersion');
             const walletClass = walletVersion ? this.ton.wallet.all[walletVersion] : this.ton.wallet.default;

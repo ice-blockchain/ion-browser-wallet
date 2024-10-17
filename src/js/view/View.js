@@ -69,6 +69,8 @@ class View {
         this.myAddress = null;
         /** @type   {string | null} */
         this.address = null;
+        /** @type   {string | null} */
+        this.publicKeyHex = null;
         /** @type   {BN | null} */
         this.balance = null;
         /** @type   {string | null} */
@@ -364,6 +366,7 @@ class View {
         // $('#receive_invoiceBtn').addEventListener('click', () => this.onCreateInvoiceClick());
         // $('#receive_shareBtn').addEventListener('click', () => this.onShareAddressClick(false));
         $('#receive .addr').addEventListener('click', () => this.onShareAddressClick(true));
+        $('#showPublicKey .key').addEventListener('click', () => this.onCopyPublicKeyClick(true));
         $('#receive_closeBtn').addEventListener('click', () => this.closePopup());
 
         $('#invoice_qrBtn').addEventListener('click', () => this.onCreateInvoiceQrClick());
@@ -491,6 +494,7 @@ class View {
         $('#processing_closeBtn').addEventListener('click', () => this.closePopup());
         $('#done_closeBtn').addEventListener('click', () => this.closePopup());
         $('#about_closeBtn').addEventListener('click', () => this.closePopup());
+        $('#showPublicKey_closeBtn').addEventListener('click', () => this.closePopup());
         $('#about_version').addEventListener('click', (e) => {
             if (e.shiftKey) {
                 this.showAlert({
@@ -1166,11 +1170,13 @@ class View {
 
     /**
      * @param address   {string}
+     * @param publicKeyHex {string}
      */
-    setMyAddress(address) {
+    setMyAddress(address, publicKeyHex) {
         setAddr($('#receive .addr'), address);
         drawQRCode(TonWeb.utils.formatTransferUrl(address), '#qr');
         this.address = address;
+        this.publicKeyHex = publicKeyHex;
         // TODO: Uncomment this, when needed
         // this.loadDiamond(address);
     }
@@ -1211,6 +1217,13 @@ class View {
         const data = onyAddress ? this.myAddress : TonWeb.utils.formatTransferUrl(this.myAddress);
         const text = onyAddress ? 'Wallet address copied to clipboard' : 'Transfer link copied to clipboard';
         $('#notify').innerText = copyToClipboard(data) ? text : 'Can\'t copy link';
+        triggerClass($('#notify'), 'faded-show', 2000);
+    }
+
+    onCopyPublicKeyClick() {
+        const data = this.publicKeyHex;
+        const text = 'Public key copied to clipboard';
+        $('#notify').innerText = copyToClipboard(data) ? text : 'Can\'t copy';
         triggerClass($('#notify'), 'faded-show', 2000);
     }
 
@@ -1415,7 +1428,9 @@ class View {
                         this.clearBackupWords();
                         if (params.myAddress) {
                             this.myAddress = params.myAddress;
-                            this.setMyAddress(params.myAddress);
+                            this.publicKeyHex = params.publicKeyHex;
+                            this.setMyAddress(params.myAddress, params.publicKeyHex);
+                            $('#showPublicKey .key').innerText = params.publicKeyHex;
                         }
                         break;
                 }
