@@ -588,8 +588,7 @@ class Controller {
             this.isTestnet = false; // IS_EXTENSION ? (await storage.getItem('isTestnet')) : (self.location.href.indexOf('testnet') > -1);
             this.isDebug = false; // IS_EXTENSION ? (await storage.getItem('isDebug')) : (self.location.href.indexOf('debug') > -1);
 
-            // TODO: Move this to project settings
-            const rpcUri = 'https://http-api.testnet.ice.io/jsonRPC';
+            const rpcUri = "https://http-api.testnet.ice.io/" + 'jsonRPC';
 
             if (IS_EXTENSION && !(await storage.getItem('address'))) {
                 await this._restoreDeprecatedStorage();
@@ -668,8 +667,7 @@ class Controller {
      */
     async sendToIndex(method, params) {
 
-        // TODO: Move this to project settings
-        const rpc = 'https://index-api.testnet.ice.io/';
+        const rpc = "https://index-api.testnet.ice.io/";
 
         const headers = {
             'Content-Type': 'application/json',

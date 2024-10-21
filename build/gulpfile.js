@@ -1,4 +1,5 @@
-const { series, task, watch } = require('gulp');
+const { series, task, watch, src, dest } = require('gulp');
+const replace = require('gulp-replace');
 const { TARGETS, BUILD_DESTS, TARGETS_BUILD_DESTS, WATCH_GLOBS } = require('./gulp/config');
 const { checkRequiredEnvVars, loadEnvFile } = require('./gulp/env');
 const copy = require('./gulp/copy');
@@ -22,6 +23,19 @@ if (!targetName || !targetNames.includes(targetName)) {
 loadEnvFile();
 checkRequiredEnvVars(taskName, targetName);
 
+// New task to inject environment variables
+const injectEnv = (buildDest) => {
+    let stream = src([`${buildDest}/**/*.js`, `${buildDest}/**/*.html`]);
+
+    // Iterate over all environment variables
+    for (const [key, value] of Object.entries(process.env)) {
+        console.log(`Replacing __${key}__ with ` + JSON.stringify(value));
+        stream = stream.pipe(replace(`__${key}__`, JSON.stringify(value)));
+    }
+
+    return stream.pipe(dest(buildDest));
+};
+
 const createBuildDestSeries = buildDest => {
     return series(
         remove.bind(null, buildDest),
@@ -29,7 +43,8 @@ const createBuildDestSeries = buildDest => {
         css.bind(null, buildDest),
         script.bind(null, buildDest),
         html.bind(null, buildDest),
-        manifest.bind(null, buildDest)
+        manifest.bind(null, buildDest),
+        injectEnv.bind(null, buildDest) // Add the injectEnv task at the end of the series
     );
 };
 
